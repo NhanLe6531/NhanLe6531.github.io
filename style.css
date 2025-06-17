@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.text-display {
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.3em;
+    min-height: 100px; /* Đảm bảo chiều cao tối thiểu */
+    overflow-wrap: break-word; /* Ngắt từ dài */
+}
+
+#current-text .correct {
+    color: green;
+}
+
+#current-text .incorrect {
+    color: red;
+    text-decoration: underline;
+}
+
+#current-text .current {
+    background-color: yellow;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+#text-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2em;
+    resize: none; /* Ngăn người dùng thay đổi kích thước textarea */
+}
+
+#restart-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+    background-color: #0056b3;
+}
+
+/* Thêm vào cuối file style.css */
+
+#results-history {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+
+#results-history h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#results-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#results-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+#results-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ... (giữ nguyên các phần CSS khác của bạn) ... */
+
+#results-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 0.95em;
+    line-height: 1.4;
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung và nút xóa */
+    justify-content: space-between; /* Đẩy nội dung và nút xóa sang hai bên */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa nội dung và nút xóa */
+}
+
+.delete-result {
+    color: #dc3545; /* Màu đỏ cho biểu tượng xóa */
+    font-weight: bold;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột vào */
+    font-size: 1.2em; /* Kích thước lớn hơn một chút */
+    padding: 2px 5px; /* Thêm padding để dễ click hơn */
+    border-radius: 3px;
+    transition: background-color 0.2s ease; /* Hiệu ứng chuyển động khi hover */
+}
+
+.delete-result:hover {
+    background-color: #f8d7da; /* Màu nền nhạt khi hover */
+    color: #a71d2a;
+}
